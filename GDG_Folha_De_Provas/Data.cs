@@ -13,6 +13,7 @@ namespace GDG_Folha_De_Provas
     {
         public static class XmlHelper
         {
+            // testing the xml wrapper
             public static bool NewLineOnAttributes { get; set; }
             /// <summary>
             /// Serializes an object to an XML string, using the specified namespaces.
