@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using static GDG_Folha_De_Provas.Data;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -96,5 +97,19 @@ namespace GDG_Folha_De_Provas
 
 
         }
-    }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
+
+           
+        }
 }
+.
