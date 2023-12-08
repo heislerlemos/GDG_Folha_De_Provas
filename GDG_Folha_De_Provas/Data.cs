@@ -36,7 +36,7 @@ namespace GDG_Folha_De_Provas
             /// <summary>
             /// Serializes an object to an XML string.
             /// </summary>
-            public static string ToXml(object obj)
+            public static string ToXml(object obj, string v)
             {
                 var ns = new XmlSerializerNamespaces();
                 ns.Add("", "");
