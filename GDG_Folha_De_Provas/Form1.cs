@@ -17,7 +17,6 @@ namespace GDG_Folha_De_Provas
     public partial class Form1 : Form
     {
 
-        private object save_xml;
 
 
         public Form1()
@@ -71,18 +70,18 @@ namespace GDG_Folha_De_Provas
         {
 
             // rende o valor no windows form
-            label4.Text = "Data " + textBox1.Text  +
+            label4.Text = "Data " + textBox1.Text +
             "\n" +
-            "Numero de folhas :" + 
+            "Numero de folhas :" +
             textBox2.Text; label4.Refresh();
 
-            string valor = (textBox1.Text  +  "|" + textBox2.Text);
+            string valor = (textBox1.Text + "|" + textBox2.Text);
 
             // guardar o ficheiro no fiechiero xml 
-          // string valor_data = XmlHelper.ToXml(textBox1.Text, "C:\\\\Users\\\\heisler.lemos\\\\source\\\\repos\\\\GDG_Folha_De_Provas\\\\GDG_Folha_De_Provas\\\\output.xml\"");
-            string valor_numero = XmlHelper.ToXml(valor , "objectos");
+            // string valor_data = XmlHelper.ToXml(textBox1.Text, "C:\\\\Users\\\\heisler.lemos\\\\source\\\\repos\\\\GDG_Folha_De_Provas\\\\GDG_Folha_De_Provas\\\\output.xml\"");
+            string valor_numero = XmlHelper.ToXml(valor, "objectos");
 
-            Console.WriteLine(valor_numero) ;
+            Console.WriteLine(valor_numero);
 
 
             // alternativa 
@@ -91,7 +90,7 @@ namespace GDG_Folha_De_Provas
 
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
             {
-                file.Write(valor_numero + Environment.NewLine );
+                file.Write(valor_numero + Environment.NewLine);
             }
 
 
@@ -108,8 +107,19 @@ namespace GDG_Folha_De_Provas
 
             XmlDocument doc = new XmlDocument();
             doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
-
-           
+            Console.WriteLine(doc.DocumentElement.OuterXml);
+            richTextBox1.Text = doc.DocumentElement.OuterXml;
+            richTextBox1.ScrollToCaret();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
-.
