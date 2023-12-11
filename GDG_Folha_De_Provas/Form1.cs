@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using static GDG_Folha_De_Provas.Data;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GDG_Folha_De_Provas
 {
@@ -69,32 +70,25 @@ namespace GDG_Folha_De_Provas
         private void button2_Click(object sender, EventArgs e)
         {
 
-            // rende o valor no windows form
-            label4.Text = "Data " + textBox1.Text +
-            "\n" +
-            "Numero de folhas :" +
-            textBox2.Text; label4.Refresh();
-
-            string valor = (textBox1.Text + "|" + textBox2.Text);
-
-            // guardar o ficheiro no fiechiero xml 
-            // string valor_data = XmlHelper.ToXml(textBox1.Text, "C:\\\\Users\\\\heisler.lemos\\\\source\\\\repos\\\\GDG_Folha_De_Provas\\\\GDG_Folha_De_Provas\\\\output.xml\"");
-            string valor_numero = XmlHelper.ToXml(valor, "objectos");
-
-            Console.WriteLine(valor_numero);
 
 
-            // alternativa 
-
-            string path = "C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml";
-
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
-            {
-                file.Write(valor_numero + Environment.NewLine);
-            }
+            XmlDocument doc = new XmlDocument();
+            doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
 
 
+            XmlNode Agendamento_de_folhas = doc.CreateElement("Agendamento_de_folhas");
 
+            XmlNode calendario = doc.CreateElement("Calendario");
+            calendario.InnerText = textBox1.Text;
+            Agendamento_de_folhas.AppendChild(calendario);
+
+            XmlNode numero = doc.CreateElement("Numero");
+            numero.InnerText = textBox2.Text;
+            Agendamento_de_folhas.AppendChild(numero);
+
+
+            doc.DocumentElement.AppendChild(Agendamento_de_folhas);
+            doc.Save("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -110,6 +104,7 @@ namespace GDG_Folha_De_Provas
             Console.WriteLine(doc.DocumentElement.OuterXml);
             richTextBox1.Text = doc.DocumentElement.OuterXml;
             richTextBox1.ScrollToCaret();
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -118,6 +113,11 @@ namespace GDG_Folha_De_Provas
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
