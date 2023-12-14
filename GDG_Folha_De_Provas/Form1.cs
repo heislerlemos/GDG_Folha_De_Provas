@@ -10,8 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace GDG_Folha_De_Provas
 {
@@ -70,25 +72,18 @@ namespace GDG_Folha_De_Provas
         private void button2_Click(object sender, EventArgs e)
         {
 
-
-
             XmlDocument doc = new XmlDocument();
-            doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
 
+            var xDoc = XDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
+            var count = xDoc.Descendants("Agendamento_de_folhas").Count();
+            Console.WriteLine(count);
+            var newAgendamento = new XElement("Agendamento_de_folhas",
+                  new XElement("id", count + 1),
+                  new XElement("Calendario", textBox1.Text),
+                  new XElement("Numero", textBox2.Text));
 
-            XmlNode Agendamento_de_folhas = doc.CreateElement("Agendamento_de_folhas");
-
-            XmlNode calendario = doc.CreateElement("Calendario");
-            calendario.InnerText = textBox1.Text;
-            Agendamento_de_folhas.AppendChild(calendario);
-
-            XmlNode numero = doc.CreateElement("Numero");
-            numero.InnerText = textBox2.Text;
-            Agendamento_de_folhas.AppendChild(numero);
-
-
-            doc.DocumentElement.AppendChild(Agendamento_de_folhas);
-            doc.Save("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
+            xDoc.Root.Add(newAgendamento);
+            xDoc.Save("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -120,6 +115,18 @@ namespace GDG_Folha_De_Provas
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
+
+            int id = 4;
+            var filter = from ab in element.Elements("animal") where ab.Attribute("id").Equals(id) select ab;
+            foreach (XElement selector in filter)
+            {
+                label1.Content = selector.Element("name").Value;
+            }
         }
     }
 }

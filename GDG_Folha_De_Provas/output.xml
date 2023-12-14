@@ -1,22 +1,13 @@
-<folhas_de_provas>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Agendamento>
   <Agendamento_de_folhas>
-    <Calendario>janeiro</Calendario>
+    <id>1</id>
+    <Calendario>Janeiro</Calendario>
+    <Numero>2</Numero>
+  </Agendamento_de_folhas>
+  <Agendamento_de_folhas>
+    <id>2</id>
+    <Calendario>Feverio</Calendario>
     <Numero>3</Numero>
   </Agendamento_de_folhas>
-  <Agendamento_de_folhas>
-    <Calendario>fevereiro</Calendario>
-    <Numero>3</Numero>
-  </Agendamento_de_folhas>
-  <Agendamento_de_folhas>
-    <Calendario>março</Calendario>
-    <Numero>4</Numero>
-  </Agendamento_de_folhas>
-  <Agendamento_de_folhas>
-    <Calendario>abril</Calendario>
-    <Numero>4</Numero>
-  </Agendamento_de_folhas>
-  <Agendamento_de_folhas>
-    <Calendario>setembro</Calendario>
-    <Numero>40</Numero>
-  </Agendamento_de_folhas>
-</folhas_de_provas>
+</Agendamento>
