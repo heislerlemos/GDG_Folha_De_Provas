@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 
 namespace GDG_Folha_De_Provas
@@ -72,7 +64,6 @@ namespace GDG_Folha_De_Provas
         private void button2_Click(object sender, EventArgs e)
         {
 
-            XmlDocument doc = new XmlDocument();
 
             var xDoc = XDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             var count = xDoc.Descendants("Agendamento_de_folhas").Count();
@@ -119,14 +110,24 @@ namespace GDG_Folha_De_Provas
 
         private void button3_Click(object sender, EventArgs e)
         {
-         
 
-            int id = 4;
-            var filter = from ab in element.Elements("animal") where ab.Attribute("id").Equals(id) select ab;
-            foreach (XElement selector in filter)
+
+            XmlDocument xmlDocument;
+
+            xmlDocument = new XmlDocument();
+            xmlDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
+
+            foreach (XmlElement xmlElement in
+                xmlDocument.DocumentElement.SelectNodes("Agendamento_de_folhas[Calendario='Novembro']"))
             {
-                label1.Content = selector.Element("name").Value;
+                Console.Out.WriteLine(xmlElement.OuterXml);
             }
+
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
