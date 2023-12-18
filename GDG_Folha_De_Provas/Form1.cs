@@ -117,7 +117,6 @@ namespace GDG_Folha_De_Provas
             xmlDocument = new XmlDocument();
             xmlDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             string input = textBox3.Text;
-            //foreach (XmlElement xmlElement in xmlDocument.DocumentElement.SelectNodes("Agendamento_de_folhas[Calendario='Novembro']"))
             foreach (XmlElement xmlElement in xmlDocument.DocumentElement.SelectNodes($"Agendamento_de_folhas[Calendario='{input}']"))
 
                 {

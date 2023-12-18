@@ -140,7 +140,7 @@
             this.button1.Location = new System.Drawing.Point(935, 50);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(97, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "Visualizar";
             this.button1.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(611, 98);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(399, 173);
+            this.richTextBox1.Size = new System.Drawing.Size(399, 302);
             this.richTextBox1.TabIndex = 9;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -161,7 +161,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(605, 369);
+            this.label5.Location = new System.Drawing.Point(602, 438);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 20);
             this.label5.TabIndex = 12;
@@ -171,10 +171,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(936, 366);
+            this.button3.Location = new System.Drawing.Point(933, 435);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(96, 23);
             this.button3.TabIndex = 13;
             this.button3.Text = "Visualizar";
             this.button3.UseVisualStyleBackColor = false;
@@ -182,7 +182,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(761, 369);
+            this.textBox3.Location = new System.Drawing.Point(758, 438);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(169, 22);
@@ -192,10 +192,10 @@
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(615, 441);
+            this.richTextBox2.Location = new System.Drawing.Point(615, 488);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(395, 98);
+            this.richTextBox2.Size = new System.Drawing.Size(395, 51);
             this.richTextBox2.TabIndex = 15;
             this.richTextBox2.Text = "";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
@@ -204,11 +204,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 34);
+            this.label6.Location = new System.Drawing.Point(2, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(468, 36);
+            this.label6.Size = new System.Drawing.Size(607, 36);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Agendamento de folhas de provas";
+            this.label6.Text = "Agendamento de folhas de provas Ano 2024";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form1
