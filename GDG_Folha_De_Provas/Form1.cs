@@ -88,7 +88,7 @@ namespace GDG_Folha_De_Provas
             XmlDocument doc = new XmlDocument();
             doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             Console.WriteLine(doc.DocumentElement.OuterXml);
-            richTextBox1.Text = doc.DocumentElement.OuterXml;
+            richTextBox1.Text = doc.DocumentElement.InnerText;
             richTextBox1.ScrollToCaret();
 
         }
@@ -119,9 +119,9 @@ namespace GDG_Folha_De_Provas
             string input = textBox3.Text;
             foreach (XmlElement xmlElement in xmlDocument.DocumentElement.SelectNodes($"Agendamento_de_folhas[Calendario='{input}']"))
 
-                {
-                 Console.Out.WriteLine(xmlElement.OuterXml);
-                richTextBox2.Text = xmlElement.OuterXml;
+            {
+                Console.Out.WriteLine(xmlElement.OuterXml);
+                richTextBox2.Text = xmlElement.InnerText;
             }
 
         }
