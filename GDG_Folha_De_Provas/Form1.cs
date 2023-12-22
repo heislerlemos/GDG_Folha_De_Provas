@@ -63,8 +63,6 @@ namespace GDG_Folha_De_Provas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-
             var xDoc = XDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             var count = xDoc.Descendants("Agendamento_de_folhas").Count();
             Console.WriteLine(count);
@@ -84,12 +82,20 @@ namespace GDG_Folha_De_Provas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             XmlDocument doc = new XmlDocument();
             doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
-            Console.WriteLine(doc.DocumentElement.OuterXml);
-            richTextBox1.Text = doc.DocumentElement.InnerText;
+            //Console.WriteLine(doc.DocumentElement.InnerText);
+            XmlNodeList Lista = doc.GetElementsByTagName("Calendario");
+            for (int i=0; i < Lista.Count; i++)
+            {
+                //richTextBox1.Text = Lista[i].InnerText;
+            }
+
             richTextBox1.ScrollToCaret();
+
+
+
+            richTextBox1.Text = "Todos os agendamentos " + "\n" + doc.DocumentElement.InnerText.ToString() +  "\n" ;
 
         }
 
@@ -111,19 +117,15 @@ namespace GDG_Folha_De_Provas
         private void button3_Click(object sender, EventArgs e)
         {
 
-
             XmlDocument xmlDocument;
-
             xmlDocument = new XmlDocument();
             xmlDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             string input = textBox3.Text;
-            foreach (XmlElement xmlElement in xmlDocument.DocumentElement.SelectNodes($"Agendamento_de_folhas[Calendario='{input}']"))
-
+            foreach (XmlNode xmlElement in xmlDocument.DocumentElement.SelectNodes($"Agendamento_de_folhas[Calendario='{input}']"))
             {
-                Console.Out.WriteLine(xmlElement.OuterXml);
-                richTextBox2.Text = xmlElement.InnerText;
+            Console.Out.WriteLine(xmlElement.InnerText);
+            richTextBox2.Text = "Numero de folhas disponiveis : " +  xmlElement.ChildNodes[2].InnerText;
             }
-
         }
 
         private void textBox3_TextChanged_1(object sender, EventArgs e)
@@ -138,6 +140,24 @@ namespace GDG_Folha_De_Provas
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+           richTextBox2.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
 
         }
     }
