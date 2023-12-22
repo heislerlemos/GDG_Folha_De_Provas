@@ -4,6 +4,8 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.XPath;
+
 
 
 
@@ -65,11 +67,27 @@ namespace GDG_Folha_De_Provas
         {
             var xDoc = XDocument.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
             var count = xDoc.Descendants("Agendamento_de_folhas").Count();
-            Console.WriteLine(count);
+            
             var newAgendamento = new XElement("Agendamento_de_folhas",
                   new XElement("id", count + 1),
                   new XElement("Calendario", textBox1.Text),
                   new XElement("Numero", textBox2.Text));
+
+            var calendario = newAgendamento.XPathSelectElement("Calendario");
+            var Numero = newAgendamento.XPathSelectElement("Numero");
+
+
+            if (calendario.Value == "Janeiro")
+            {
+                Console.WriteLine("Este mes ja existe será adicionado o numero");
+                new XElement("Numero", textBox2.Text).Add(Numero.Value)  ;
+            }
+
+
+            
+                   
+
+          
 
             xDoc.Root.Add(newAgendamento);
             xDoc.Save("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
@@ -84,18 +102,17 @@ namespace GDG_Folha_De_Provas
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("C:\\Users\\heisler.lemos\\source\\repos\\GDG_Folha_De_Provas\\GDG_Folha_De_Provas\\output.xml");
-            //Console.WriteLine(doc.DocumentElement.InnerText);
-            XmlNodeList Lista = doc.GetElementsByTagName("Calendario");
-            for (int i=0; i < Lista.Count; i++)
+            XmlNodeList Calendario = doc.GetElementsByTagName("Calendario");
+            XmlNodeList Numero = doc.GetElementsByTagName("Numero");
+
+            for (int i = 0; i < Calendario.Count; i++)
             {
-                //richTextBox1.Text = Lista[i].InnerText;
+                Console.WriteLine(Calendario[i].InnerText);
+                richTextBox1.AppendText(" | " + Calendario[i].InnerText.PadRight(5) + "--->" + "  " + Numero[i].InnerText + " | " + "\n");
+
             }
 
             richTextBox1.ScrollToCaret();
-
-
-
-            richTextBox1.Text = "Todos os agendamentos " + "\n" + doc.DocumentElement.InnerText.ToString() +  "\n" ;
 
         }
 

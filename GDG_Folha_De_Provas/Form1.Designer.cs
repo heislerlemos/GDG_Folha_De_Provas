@@ -45,8 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,19 +55,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(22, 21);
+            this.label1.Location = new System.Drawing.Point(22, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 32);
+            this.label1.Size = new System.Drawing.Size(458, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Inserir data e numero de impresão";
+            this.label1.Text = "Inserir data e numero de impressão";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 206);
+            this.textBox1.Location = new System.Drawing.Point(318, 207);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 22);
+            this.textBox1.Size = new System.Drawing.Size(175, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -75,30 +75,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 202);
+            this.label2.Location = new System.Drawing.Point(23, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Insira o nome do mes";
+            this.label2.Text = "Insirá o nome do mês";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 242);
+            this.label3.Location = new System.Drawing.Point(13, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 25);
+            this.label3.Size = new System.Drawing.Size(230, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "insira o numero de folhas";
+            this.label3.Text = "Insira o numero de folhas";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(261, 246);
+            this.textBox2.Location = new System.Drawing.Point(264, 141);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 22);
+            this.textBox2.Size = new System.Drawing.Size(45, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -120,7 +120,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(349, 361);
+            this.label4.Location = new System.Drawing.Point(401, 362);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 32);
             this.label4.TabIndex = 8;
@@ -131,7 +131,7 @@
             this.Verif.AutoSize = true;
             this.Verif.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Verif.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Verif.Location = new System.Drawing.Point(862, 115);
+            this.Verif.Location = new System.Drawing.Point(858, 106);
             this.Verif.Name = "Verif";
             this.Verif.Size = new System.Drawing.Size(303, 20);
             this.Verif.TabIndex = 10;
@@ -154,10 +154,10 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(774, 206);
+            this.richTextBox1.Location = new System.Drawing.Point(798, 203);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(437, 302);
+            this.richTextBox1.Size = new System.Drawing.Size(153, 433);
             this.richTextBox1.TabIndex = 9;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -166,7 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 444);
+            this.label5.Location = new System.Drawing.Point(78, 445);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 20);
             this.label5.TabIndex = 12;
@@ -176,10 +176,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(345, 434);
+            this.button3.Location = new System.Drawing.Point(402, 435);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 42);
+            this.button3.Size = new System.Drawing.Size(91, 42);
             this.button3.TabIndex = 13;
             this.button3.Text = "Visualizar";
             this.button3.UseVisualStyleBackColor = false;
@@ -187,20 +187,20 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(170, 444);
+            this.textBox3.Location = new System.Drawing.Point(227, 445);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 22);
+            this.textBox3.Size = new System.Drawing.Size(164, 22);
             this.textBox3.TabIndex = 14;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(30, 499);
+            this.richTextBox2.Location = new System.Drawing.Point(73, 500);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(492, 30);
+            this.richTextBox2.Size = new System.Drawing.Size(513, 30);
             this.richTextBox2.TabIndex = 15;
             this.richTextBox2.Text = "";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
@@ -211,18 +211,18 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(285, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(647, 36);
+            this.label6.Size = new System.Drawing.Size(660, 36);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Agendamento de folhas de provas Ano 2024";
+            this.label6.Text = "Agendamento de Folhas de Provas Ano 2024";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Highlight;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(447, 434);
+            this.button4.Location = new System.Drawing.Point(504, 435);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 42);
+            this.button4.Size = new System.Drawing.Size(95, 42);
             this.button4.TabIndex = 17;
             this.button4.Text = "Limpar";
             this.button4.UseVisualStyleBackColor = false;
@@ -234,22 +234,13 @@
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 105);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Location = new System.Drawing.Point(69, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(522, 253);
+            this.panel1.Size = new System.Drawing.Size(517, 253);
             this.panel1.TabIndex = 18;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(1029, 154);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 39);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Limpar";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -264,6 +255,18 @@
             this.button6.Text = "Limpar";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(1029, 154);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(159, 39);
+            this.button5.TabIndex = 19;
+            this.button5.Text = "Limpar";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -282,9 +285,6 @@
             this.Controls.Add(this.Verif);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
